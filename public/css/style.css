@@ -1,0 +1,66 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+.text-next-row {
+  word-break: keep-all;
+}
+/*
+@font-face { font-family: 'UhBeemysen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff'); font-weight: normal; font-style: normal; }
+*/
+.vertical-center {
+  
+  min-height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  word-break: keep-all;
+  padding-top: 56px;
+  font-family: 'UhBeemysen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff'); font-weight: normal; font-style: normal; 
+}
+
+.font_nanumsquare {
+  font-family: 'UhBeemysen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff'); font-weight: normal; font-style: normal; 
+   }
+
+.font_gmarket {
+  
+  font-family: 'GmarketSansBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal;
+}
+
+#navbar_brand {
+  font-family: 'Comic Neue', cursive;
+}
+
+.font_mapo {
+  font-family: 'MapoPeacefull'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff'); font-weight: normal; font-style: normal;
+}
+
+.text-center {
+  margin: 0 auto;
+}
+.jumbotron {
+  display: flex;
+  /* flex-direction: column;*/
+  align-items: center;
+  /* justify-content: center;*/
+  text-align:center;
+  color: white;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  height: 500px;
+  background: url("https://modo-phinf.pstatic.net/20200408_164/1586335207673hPKHg_JPEG/mosatgQQqU.jpeg");
+  background-size: cover; 
+  border-radius: 0.3rem;
+  vertical-align: middle;
+}
