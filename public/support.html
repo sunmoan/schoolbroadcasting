@@ -17,19 +17,31 @@
 
 	<body>
 
+		<script>
+			function phonenumber(){
+				alert("Kingston and Jeong의 +1(609) 288-8396 (미국) 고객지원센터를 지원합니다. 부재중인 경우 메시지를 남겨주세요. 통화요금 외에 추가요금은 부과되지 않습니다. 확인을 누르면 통화 앱으로 연결됩니다.(모바일)")
+				location.href = "tel:+16093888396"
+
+			};
+			function email(){
+				alert("sunmo0723@gmail.com으로 문의사항을 보내주세요. 확인을 누르면 메일 앱으로 연결됩니다.")
+				location.href = "mailto:sunmo0723@gmail.com"
+
+			}
+		</script>
 		<div class="wrapper">
 			<div class="inner">
 				<form action="">
 					<h3>개발자에게 문의하기</h3>
 					<p style="margin-bottom: 3px;">시스템 사용 도중에 문제가 발생했거나, 문의사항이 있으신가요? </br>아래에서 방법을 고르시거나, 내용을 입력한 후 접수해 주세요.</br></br>소셜네트워크를 통해 연락하기</p>
 					<p>
-						<a style="color:white" href="tel:+16093888396"><i style="font-size: 3em" class="fas fa-phone"></i></a>
+						<a style="color:white" href="javascript:void(0);" onclick="phonenumber();"><i style="font-size: 3em" class="fas fa-phone"></i></a>
 						&nbsp;
 						<a style="color:white" href="//open.kakao.com/o/skTwU05b"><i style="font-size: 3em" class="icon-kakaotalk"></i></a>
 						&nbsp;
 						<a style="color:white" href="//m.me/105695967767953"><i style="font-size: 3em" class="fab fa-facebook-messenger"></i></a>
 						&nbsp;&nbsp;&nbsp;
-						<a style="color:white" href="mailto:sunmo0723@gmail.com"><i style="font-size: 3em" class="fa fa-envelope"></i></a>
+						<a style="color:white" href="javascript:void(0);" onclick="email();"><i style="font-size: 3em" class="fa fa-envelope"></i></a>
 						&nbsp;&nbsp;&nbsp;
 						<a style="color:white" href="//t.me/developercontact"><i style="font-size: 3em" class="fa fa-telegram"></i></a>
 						
