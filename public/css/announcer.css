@@ -1,0 +1,121 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+ @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+ @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype'); } @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype') } @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 300; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype'); } .nanumbarungothic * { font-family: 'NanumBarunGothic', sans-serif; }
+ @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+.margin-botton-0 {
+    margin-bottom: 0px;
+}
+
+ .text-next-row {
+   word-break: keep-all;
+ }
+ /*
+ @font-face { font-family: 'UhBeemysen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff'); font-weight: normal; font-style: normal; }
+ */
+ .first-maintext {
+    padding-top: 0px;
+
+ }
+ .vertical-center {
+   
+   min-height: 100%;
+   min-height: 100vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ body {
+   word-break: keep-all;
+   padding-top: 56px;
+   font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 500;
+ }
+
+ .font-nanumbarun {
+    font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 700;
+     }
+
+ 
+ .font-nanumsquare {
+   font-family: 'UhBeemysen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff'); font-weight: normal; font-style: normal; 
+    }
+ 
+ .font-gmarket {
+   
+   font-family: 'GmarketSansBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal;
+ }
+ 
+ 
+ #navbar_brand {
+   font-family: 'Comic Neue', cursive;
+ }
+ 
+ .font-mapo {
+   font-family: 'MapoPeacefull'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff'); font-weight: normal; font-style: normal;
+ }
+ 
+ .font-namyangjoo {
+    font-family: 'Eoe_Zno_L'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_L.woff') format('woff'); font-weight: normal; font-style: normal; 
+  }
+
+ .text-center {
+   margin: 0 auto;
+ }
+
+ .jumbotron {
+    display: flex;
+    /* flex-direction: column;*/
+  
+    /* justify-content: center;*/
+    
+    color: white;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    height: 300px;
+
+    
+    background-size: cover; 
+    border-radius: 0.3rem;
+    vertical-align: middle;
+  }
+  
+ .width80 {
+    max-width: 10000rem;
+    width:100%
+  }
+
+  .maintext {
+      padding-left: 2.5%;
+      padding-right: 1%;
+      width:100%;
+      min-height: 800px
+  }
+
+  .nopaddingbottom {
+      padding-bottom: 0cm;
+      margin-bottom: 0cm;
+  }
+
+ .jumbotron1 {
+   display: flex;
+   /* flex-direction: column;*/
+   align-items: center;
+   /* justify-content: center;*/
+   text-align:center;
+   color: white;
+   padding: 2rem 1rem;
+   margin-bottom: 2rem;
+   height: 280px;
+   background: url("https://modo-phinf.pstatic.net/20200409_251/1586437950192TdBU1_JPEG/mosaixDK9a.jpeg ");
+   
+   background-size: cover; 
+   border-radius: 0.3rem;
+   vertical-align: middle;
+ }
+ 
