@@ -24,6 +24,22 @@
   justify-content: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body {
 
   word-break: keep-all;
@@ -41,7 +57,7 @@ body {
 }
 
 #navbar_brand {
-  font-family: 'Comic Neue', cursive;
+  font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 500;
 }
 
 .font_mapo {
