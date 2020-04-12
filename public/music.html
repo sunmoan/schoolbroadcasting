@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -10,8 +10,41 @@
   <meta http-equiv="Cache-Control" content="no-store" />
 
   <title>AI 아나운서</title>
+  
   <script>
     if (location.href.indexOf('#reload') == -1) { location.href += '#reload'}
+    var isMobile = {
+        Android: function () {
+                 return navigator.userAgent.match(/Android/i) == null ? false : true;
+        },
+        BlackBerry: function () {
+                 return navigator.userAgent.match(/BlackBerry/i) == null ? false : true;
+        },
+        IOS: function () {
+                 return navigator.userAgent.match(/iPhone|iPad|iPod/i) == null ? false : true;
+        },
+        Opera: function () {
+                 return navigator.userAgent.match(/Opera Mini/i) == null ? false : true;
+        },
+        Windows: function () {
+                 return navigator.userAgent.match(/IEMobile/i) == null ? false : true;
+        },
+        any: function () {
+                 return (isMobile.Android() || isMobile.BlackBerry() || isMobile.IOS() || isMobile.Opera() || isMobile.Windows());
+        }
+};
+
+
+if(isMobile.any()){
+  
+      alert("모바일 환경에서는 사용이 불가능한 메뉴입니다. 메인메뉴로 이동합니다.");
+      location.href="./#";
+      
+        
+    
+}
+
+
  
   </script>
   <!-- Bootstrap core CSS -->
@@ -72,17 +105,28 @@
           <button class="btn btn-warning btn-xl-playing playstatusclass" style="display:none;color:white;" id="youtube-audio-loading">로딩중</button>
         </h1>
          </br>   
-         <a class="lead">광고없는 멜론차트 TOP100을 재생합니다. (유튜브 서버)</a>
+         <a class="lead">광고없는 멜론차트 TOP100을 재생합니다. (유튜브 <a class="lead" id="showembeda" style="color:skyblue" href="javascript:void(0);" onclick="showyoutube();">EMBED</a>)</a>
         
         </br>
+        <div style="display: none;"
+    data-video="kvO_nHnvPtQ"  
+        data-autoplay="0"         
+        data-loop="1"             
+        id="player"></div>
         </br>
        
         <div class="progress" style="display:none " id="progressbar-loading">
           <div class="progress-bar progress-bar-striped progress-bar-animated playstatusclass"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"><strong>로딩중입니다. </strong></div>
         </br> </div>      
-        <div class="progress" style="display:none " id="progressbar-playing">
-          <div class="progress-bar progress-bar-striped playstatusclass bg-success"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"><strong>재생시간 </strong></div>
-        </br> </div>  </br>
+        <div class="progress position-relative" id="progressbar-playing" style="display:none;color:black;text-align:center;width:100%;height:25px;font-size:1.2em">
+          <a class="justify-content-center d-flex position-absolute w-100" id="percentindicator">진행상태바 초기설정중...</a>
+          <div class="progress-bar playstatusclass bg-primary"  role="progressbar" aria-valuemin="0" aria-valuemax="100" id="currenttime" style="width: 0.5%"></div>
+          
+
+        </div>  
+    
+        
+      </br></br>
 
         <contatiner id="youtube-audio-play"><button class="btn btn-outline-success btn-xl playstatusclass"  onclick="videostart();">재생</button>  &nbsp;</contatiner>
         <contatiner id="youtube-audio-resume" style="display:none">  <button class="btn btn-outline-warning btn-xl playstatusclass" onclick="videoresume();">이어서 듣기</button>  &nbsp;</contatiner>
@@ -90,10 +134,7 @@
         <contatiner id="youtube-audio-pause" style="display:none">  <button class="btn btn-outline-warning btn-xl playstatusclass"  onclick="videopause();" >일시정지</button> &nbsp;</contatiner>
         <contatiner id="youtube-audio-fromfirst" style="display:none"><button class="btn btn-outline-primary btn-xl playstatusclass" onclick="videofromfirst();" >처음부터 듣기</button> &nbsp;</contatiner>
         <button class="btn btn-danger btn-xl" onCLick="location.href='./#'">종료하기</button>
-        <div data-video="8N89LcgEbz8"  
-        data-autoplay="0"         
-        data-loop="1"             
-        id="player"></div>
+        
       </contatiner>
     
     </div>
