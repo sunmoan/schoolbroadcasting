@@ -22,8 +22,8 @@ var tag = document.createElement('script');
         'onStateChange': onPlayerStateChange 
       },
       playerVars: {
-        autoplay: ctrlq.dataset.autoplay,
-        loop: ctrlq.dataset.loop,
+        autoplay: '0',
+        loop: '0'
         
       },
     //  https://jsbin.com/cocatuta/29/edit?js,output
@@ -42,6 +42,7 @@ var tag = document.createElement('script');
   });
     //player.loadVideoById("bHQqvYy5KYo", 5, "large");
     player.playVideo();
+    player.seekTo('0',true);
     player.setVolume('50')
     document.getElementById("youtube-audio-play").style.display = "none";
     document.getElementById("youtube-audio-loading").style.display = "inline";
@@ -161,14 +162,4 @@ var tag = document.createElement('script');
     player.playVideo();
   }
 
-
-  function toggleAudio() {
-    if ( player.getPlayerState() == 1 || player.getPlayerState() == 3 ) {
-      player.pauseVideo(); 
-      
-    } else {
-      player.playVideo(); 
-   
-    } 
-  } 
 
