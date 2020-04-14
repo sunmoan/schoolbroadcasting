@@ -15,7 +15,7 @@ var tag = document.createElement('script');
     player = new YT.Player('player', {
       height: '270',
       width: '480',
-      //videoId: ctrlq.dataset.video,
+      videoId: ctrlq.dataset.video,
  //     list: 'PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG',
       events: {
         'onReady': onPlayerReady,
@@ -33,33 +33,45 @@ var tag = document.createElement('script');
 
 
   function videostart() {
-    player.loadPlaylist({
-      'list': 'PLjAinDIbL70ZrNYfbDA2d67l1bYh5b3bX',
-      'listType': 'playlist',
-      'index': 0,
-      'startSeconds': 0,
-      'suggestedQuality': 'small'
-  });
+  
+  
     //player.loadVideoById("bHQqvYy5KYo", 5, "large");
-    player.playVideo();
-    player.seekTo('0',true);
+   
+   
+    
+   
+   
+   
     player.setVolume('50')
     document.getElementById("youtube-audio-play").style.display = "none";
     document.getElementById("youtube-audio-loading").style.display = "inline";
     document.getElementById("progressbar-loading").style.display = "";
-    
-    
+    player.seekTo(0,true);
+    player.pauseVideo();
+    player.playVideo();
+
    
   }
 
   function onPlayerReady(event) {
+    player.cuePlaylist({
+      'listType': 'playlist',
+      'list': 'PLjAinDIbL70ZrNYfbDA2d67l1bYh5b3bX',
+      
+      'index': 0,
+      'startSeconds': 0,
+      'suggestedQuality': 'small'
+  });
     /*
     player.loadPlaylist(playlist:String|Array,
       index:Number,
       startSeconds:Number,
       suggestedQuality:String)
     */
-
+   player.pauseVideo();
+   player.seekTo(0,true);
+ 
+    player.playVideo();
     
   }
 
@@ -131,8 +143,11 @@ var tag = document.createElement('script');
  
     if(playcounter == 0){
 
-      alert("먼저 차트를 재생해주세요.")
-  
+     
+        $('#player').show();
+        
+
+     
      } else {
   
          if($('#player').css('display') == 'none'){

@@ -9,11 +9,44 @@ var tag = document.createElement('script');
 
   var player;
 
+  function loadingalert1() {
+
+    document.getElementById('loadingalert1').style.display = 'inline';
+    
+  }
+
+  function loadingalert2() {
+    document.getElementById('loadingalert2').style.display = 'inline';
+  }
+
+  function loadingalert3() {
+    document.getElementById('loadingalert3').style.display = 'inline';
+  }
+
+  function loadingalert4() {
+    document.getElementById('loadingalert4').style.display = 'inline';
+  }
+
+  function loadingalert5() {
+    document.getElementById('loadingalert5').style.display = 'inline';
+  }
+
+  function loadingalert6() {
+    document.getElementById('loadingalert6').style.display = 'inline';
+  }
+
+  function loadingalert7() {
+    document.getElementById('loadingalert7').style.display = 'inline';
+  }
+
+  function loadingalert8() {
+    document.getElementById('loadingalert8').style.display = 'inline';
+  }
 
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-   //   height: 100,
-     // width: 900,
+      height: 100,
+       width: 900,
       events: {
         'onReady': onPlayerReady,
         'onStateChange': onPlayerStateChange 
@@ -29,16 +62,17 @@ var tag = document.createElement('script');
 
 
   function VideostartbyVideoId(VideoId) {
-   // alert("VideostartbyVideoId");
+    document.getElementById("youtubeplayerdiv").style.display = "";
     playcounter ++;
    // alert(VideoId);
     player.loadVideoById(VideoId, 5, "large");
     player.playVideo();
+    
     player.seekTo('0',true);
-    player.setVolume('50')
-    document.getElementById("youtube-audio-play").style.display = "none";
-    document.getElementById("youtube-audio-loading").style.display = "inline";
-    document.getElementById("progressbar-loading").style.display = "";
+    player.setVolume('100')
+ //   document.getElementById("youtube-audio-play").style.display = "none";
+   // document.getElementById("youtube-audio-loading").style.display = "inline";
+  //  document.getElementById("progressbar-loading").style.display = "";
     
     
    
@@ -54,7 +88,9 @@ var tag = document.createElement('script');
       'suggestedQuality': 'small'
   });
     //player.loadVideoById("bHQqvYy5KYo", 5, "large");
+    
     player.playVideo();
+    
     player.seekTo('0',true);
     player.setVolume('50')
     document.getElementById("youtube-audio-play").style.display = "none";
@@ -68,17 +104,26 @@ var tag = document.createElement('script');
 
 
   function onPlayerReady(event) {
-
+    player.loadVideoById('kvO_nHnvPtQ', 5, "large");
+    player.playVideo();
   }
 
 
   function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING) { //재생중이면
-      
+      document.getElementById('loadingalert1').style.display = 'none';
+      document.getElementById('loadingalert2').style.display = 'none';
+      document.getElementById('loadingalert3').style.display = 'none';
+      document.getElementById('loadingalert4').style.display = 'none';
+      document.getElementById('loadingalert5').style.display = 'none';
+      document.getElementById('loadingalert6').style.display = 'none';
+      document.getElementById('loadingalert7').style.display = 'none';
+      document.getElementById('loadingalert8').style.display = 'none';
+
     } else if (event.data == YT.PlayerState.PAUSED) { //일시정지중이면
-     
-    } else {
-     
+   
+    } else if (event.data == YT.PlayerState.ENDED) {
+      document.getElementById("youtubeplayerdiv").style.display = "none";
     }
   }
 
@@ -88,15 +133,23 @@ var tag = document.createElement('script');
     if(playcounter == 0){
 
       alert("먼저 내용을 선택하세요.")
+      if($('#youtubediv').css('display') == 'none'){
+        $('#youtubediv').show();
+        $('#showembeda').text('숨기기');
+        player.setSize(200, 200);
+     }else{
+        $('#youtubediv').hide();
+        $('#showembeda').text('EMBED');
+     }
   
      } else {
 
-         if($('#player').css('display') == 'none'){
-            $('#player').show();
+         if($('#youtubediv').css('display') == 'none'){
+            $('#youtubediv').show();
             $('#showembeda').text('숨기기');
 
          }else{
-            $('#player').hide();
+            $('#youtubediv').hide();
             $('#showembeda').text('EMBED');
          }
   
