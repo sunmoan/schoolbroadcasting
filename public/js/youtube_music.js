@@ -38,22 +38,22 @@ var tag = document.createElement('script');
     //player.loadVideoById("bHQqvYy5KYo", 5, "large");
    
    
-    
+ 
    
+   player.seekTo(0,true);
    
-   
-    player.setVolume('50')
+    player.setVolume('50');
     document.getElementById("youtube-audio-play").style.display = "none";
     document.getElementById("youtube-audio-loading").style.display = "inline";
     document.getElementById("progressbar-loading").style.display = "";
-    player.seekTo(0,true);
-    player.pauseVideo();
-    player.playVideo();
-
+    
    
+    player.playVideo();
   }
 
   function onPlayerReady(event) {
+    player.loadVideoById('kvO_nHnvPtQ', 5, "large");
+    player.playVideo();
     player.cuePlaylist({
       'listType': 'playlist',
       'list': 'PLjAinDIbL70ZrNYfbDA2d67l1bYh5b3bX',
@@ -68,10 +68,10 @@ var tag = document.createElement('script');
       startSeconds:Number,
       suggestedQuality:String)
     */
-   player.pauseVideo();
-   player.seekTo(0,true);
  
-    player.playVideo();
+  
+ 
+   
     
   }
 
